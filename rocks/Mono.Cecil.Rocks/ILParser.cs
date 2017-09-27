@@ -44,6 +44,7 @@ namespace Mono.Cecil.Rocks {
 
 		class ParseContext {
 			public CodeReader Code { get; set; }
+			public int Position { get; set; }
 			public MetadataReader Metadata { get; set; }
 			public Collection<VariableDefinition> Variables { get; set; }
 			public IILVisitor Visitor { get; set; }
@@ -58,32 +59,44 @@ namespace Mono.Cecil.Rocks {
 			if (!method.HasBody || !method.HasImage)
 				throw new ArgumentException ();
 
+			method.Module.Read (method, (m, _) => {
+				ParseMethod (m, visitor);
+				return true;
+			});
+		}
+
+		static void ParseMethod (MethodDefinition method, IILVisitor visitor)
+		{
 			var context = CreateContext (method, visitor);
 			var code = context.Code;
 
 			var flags = code.ReadByte ();
 
-			switch (flags & 0x3) {
-			case 0x2: // tiny
-				int code_size = flags >> 2;
-				ParseCode (code_size, context);
-				break;
-			case 0x3: // fat
-				code.Advance (-1);
-				ParseFatMethod (context);
-				break;
-			default:
-				throw new NotSupportedException ();
+			switch (flags & 0x3)
+			{
+				case 0x2: // tiny
+					int code_size = flags >> 2;
+					ParseCode (code_size, context);
+					break;
+				case 0x3: // fat
+					code.Advance(-1);
+					ParseFatMethod (context);
+					break;
+				default:
+					throw new NotSupportedException();
 			}
+
+			code.MoveBackTo (context.Position);
 		}
 
 		static ParseContext CreateContext (MethodDefinition method, IILVisitor visitor)
 		{
 			var code = method.Module.Read (method, (_, reader) => reader.code);
-			code.MoveTo (method);
+			var position = code.MoveTo (method);
 
 			return new ParseContext {
 				Code = code,
+				Position = position,
 				Metadata = code.reader,
 				Visitor = visitor,
 			};
