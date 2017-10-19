@@ -27,8 +27,6 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#if !READ_ONLY
-
 #if !NET_CORE
 
 using System;
@@ -246,8 +244,6 @@ namespace Mono.Security.Cryptography {
 		}
 	}
 }
-
-#endif
 
 #endif
 

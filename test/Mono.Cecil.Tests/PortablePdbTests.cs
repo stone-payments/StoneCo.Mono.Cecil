@@ -1,4 +1,3 @@
-#if !READ_ONLY
 using System;
 using System.IO;
 using System.Linq;
@@ -339,7 +338,6 @@ namespace Mono.Cecil.Tests {
 			});
 		}
 
-#if !READ_ONLY
 		[Test]
 		public void EmbeddedCompressedPortablePdb ()
 		{
@@ -543,7 +541,5 @@ class Program
 	IL_0001: ret", main);
 			}, symbolReaderProvider: typeof (PortablePdbReaderProvider), symbolWriterProvider: typeof (PortablePdbWriterProvider));
 		}
-#endif
 	}
 }
-#endif

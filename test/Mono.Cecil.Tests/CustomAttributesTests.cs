@@ -449,7 +449,6 @@ namespace Mono.Cecil.Tests {
 			});
 		}
 
-#if !READ_ONLY
 		[Test]
 		public void DefineCustomAttributeFromBlob ()
 		{
@@ -487,7 +486,6 @@ namespace Mono.Cecil.Tests {
 
 			module.Dispose ();
 		}
-#endif
 		static void AssertCustomAttribute (string expected, CustomAttribute attribute)
 		{
 			Assert.AreEqual (expected, PrettyPrint (attribute));

@@ -60,12 +60,10 @@ namespace Mono.Cecil.Cil {
 			this.debug_reader = new MetadataReader (image, module, this.reader);
 		}
 
-#if !READ_ONLY
 		public ISymbolWriterProvider GetWriterProvider ()
 		{
 			return new PortablePdbWriterProvider ();
 		}
-#endif
 
 		public bool ProcessDebugHeader (ImageDebugHeader header)
 		{
@@ -201,12 +199,11 @@ namespace Mono.Cecil.Cil {
 			this.reader = reader;
 		}
 
-#if !READ_ONLY
 		public ISymbolWriterProvider GetWriterProvider ()
 		{
 			return new EmbeddedPortablePdbWriterProvider ();
 		}
-#endif
+
 		public bool ProcessDebugHeader (ImageDebugHeader header)
 		{
 			return reader.ProcessDebugHeader (header);
@@ -222,9 +219,6 @@ namespace Mono.Cecil.Cil {
 			reader.Dispose ();
 		}
 	}
-
-
-#if !READ_ONLY
 
 	public sealed class PortablePdbWriterProvider : ISymbolWriterProvider
 	{
@@ -495,8 +489,6 @@ namespace Mono.Cecil.Cil {
 			((IMetadataSymbolWriter) writer).WriteModule ();
 		}
 	}
-
-#endif
 
 	static class PdbGuidMapping {
 

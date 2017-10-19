@@ -3,7 +3,6 @@
   <PropertyGroup>
     <!-- Configuration definitions. -->
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Configurations>Debug;Release;Debug_ReadOnly;Release_ReadOnly</Configurations>
     
     <!-- Path definitions. -->
     <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
@@ -17,9 +16,9 @@
     
     <!-- Target framework definitions. -->
     <ProjectTargetFrameworkForNetStandard>netstandard2.0</ProjectTargetFrameworkForNetStandard>
-    <ProjectTargetFrameworks>$(ProjectTargetFrameworkForNetStandard);net40;net35</ProjectTargetFrameworks>
+    <ProjectTargetFrameworks>$(ProjectTargetFrameworkForNetStandard)</ProjectTargetFrameworks>
     <TestProjectTargetFrameworkForNetStandard>net462</TestProjectTargetFrameworkForNetStandard>
-    <TestProjectTargetFrameworks>$(TestProjectTargetFrameworkForNetStandard);net40;net35</TestProjectTargetFrameworks>
+    <TestProjectTargetFrameworks>$(TestProjectTargetFrameworkForNetStandard)</TestProjectTargetFrameworks>
     
     <!-- Compile-time constant for the target framework moniker. -->
     <DefineConstants>$(DefineConstants);$(TargetFramework.TrimEnd('.0123456789').ToUpper())</DefineConstants>
@@ -41,10 +40,6 @@
     <VersionPrefix>0.10.0.0</VersionPrefix>
     <VersionSuffix>beta6</VersionSuffix>
     <PackageId>$(MSBuildProjectName).NotPackage</PackageId>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition=" $(Configuration.Contains('ReadOnly')) ">
-    <DefineConstants>$(DefineConstants);READ_ONLY</DefineConstants>
   </PropertyGroup>
   
   <!-- Split debug and release information. -->

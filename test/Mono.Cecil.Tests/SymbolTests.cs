@@ -1,4 +1,3 @@
-#if !READ_ONLY
 using System;
 using System.IO;
 
@@ -52,4 +51,3 @@ namespace Mono.Cecil.Tests {
 		}
 	}
 }
-#endif

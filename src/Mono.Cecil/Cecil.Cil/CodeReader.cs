@@ -442,8 +442,6 @@ namespace Mono.Cecil.Cil {
 			return new MetadataToken (ReadUInt32 ());
 		}
 
-#if !READ_ONLY
-
 		public ByteBuffer PatchRawMethodBody (MethodDefinition method, CodeWriter writer, out int code_size, out MetadataToken local_var_token)
 		{
 			var position = MoveTo (method);
@@ -635,8 +633,5 @@ namespace Mono.Cecil.Cil {
 				}
 			}
 		}
-
-#endif
-
 	}
 }

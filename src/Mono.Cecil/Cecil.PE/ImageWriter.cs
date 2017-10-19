@@ -11,8 +11,6 @@
 using System;
 using System.IO;
 
-#if !READ_ONLY
-
 using Mono.Cecil.Cil;
 using Mono.Cecil.Metadata;
 
@@ -847,5 +845,3 @@ namespace Mono.Cecil.PE {
 		}
 	}
 }
-
-#endif

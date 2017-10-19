@@ -1,4 +1,3 @@
-#if !READ_ONLY
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -420,4 +419,3 @@ namespace Mono.Cecil.Tests {
 		}
 	}
 }
-#endif

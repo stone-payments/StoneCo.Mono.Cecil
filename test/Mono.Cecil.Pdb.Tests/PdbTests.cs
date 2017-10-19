@@ -1,4 +1,3 @@
-#if !READ_ONLY
 using System.IO;
 using System.Linq;
 
@@ -463,4 +462,3 @@ namespace Mono.Cecil.Tests {
 		}
 	}
 }
-#endif
