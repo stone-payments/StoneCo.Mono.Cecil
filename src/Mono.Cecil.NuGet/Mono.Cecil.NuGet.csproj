@@ -19,9 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mono.Cecil\Mono.Cecil.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\Mono.Cecil.Mdb\Mono.Cecil.Mdb.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\Mono.Cecil.Pdb\Mono.Cecil.Pdb.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\Mono.Cecil.Rocks\Mono.Cecil.Rocks.csproj" PrivateAssets="all" />
   </ItemGroup>
 
   <!-- Include assemblies in the package. -->

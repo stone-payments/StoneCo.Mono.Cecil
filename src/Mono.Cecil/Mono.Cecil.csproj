@@ -4,6 +4,11 @@
     <TargetFrameworks>$(ProjectTargetFrameworks)</TargetFrameworks>
     <ProjectGuid>{D68133BD-1E63-496E-9EDE-4FBDBF77B486}</ProjectGuid>
     <RootNamespace>Mono</RootNamespace>
+    <NoWarn>$(NoWarn);0649</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);CECIL;INSIDE_ROCKS</DefineConstants>
   </PropertyGroup>
   
 </Project>
