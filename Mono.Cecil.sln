@@ -9,19 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "etc", "etc", "{E2D83568-2A4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3BD6582C-E9D9-4F31-86AE-990304A1581D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Cecil", "src\Mono.Cecil\Mono.Cecil.csproj", "{D68133BD-1E63-496E-9EDE-4FBDBF77B486}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mono.Cecil", "src\Mono.Cecil\Mono.Cecil.csproj", "{D68133BD-1E63-496E-9EDE-4FBDBF77B486}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{74E5ECE0-06B4-401C-AEBA-E8DD53E17943}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Cecil.Tests", "test\Mono.Cecil.Tests\Mono.Cecil.Tests.csproj", "{A47B1F49-A81A-43E8-BE6B-DD28AF2C4055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mono.Cecil.Tests", "test\Mono.Cecil.Tests\Mono.Cecil.Tests.csproj", "{A47B1F49-A81A-43E8-BE6B-DD28AF2C4055}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Cecil.Mdb.Tests", "test\Mono.Cecil.Mdb.Tests\Mono.Cecil.Mdb.Tests.csproj", "{AC71DF9C-99FA-4A63-990A-66C8010355A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mono.Cecil.Mdb.Tests", "test\Mono.Cecil.Mdb.Tests\Mono.Cecil.Mdb.Tests.csproj", "{AC71DF9C-99FA-4A63-990A-66C8010355A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Cecil.Pdb.Tests", "test\Mono.Cecil.Pdb.Tests\Mono.Cecil.Pdb.Tests.csproj", "{29300103-CB76-4A1D-B6FD-FFD91C1EC8AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mono.Cecil.Pdb.Tests", "test\Mono.Cecil.Pdb.Tests\Mono.Cecil.Pdb.Tests.csproj", "{29300103-CB76-4A1D-B6FD-FFD91C1EC8AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Cecil.Rocks.Tests", "test\Mono.Cecil.Rocks.Tests\Mono.Cecil.Rocks.Tests.csproj", "{C6CFD7E1-B855-44DC-B4CE-9CD72984AF52}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.Cecil.NuGet", "src\Mono.Cecil.NuGet\Mono.Cecil.NuGet.csproj", "{17B250AA-691E-4E14-AF82-EF8D5C45260E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mono.Cecil.Rocks.Tests", "test\Mono.Cecil.Rocks.Tests\Mono.Cecil.Rocks.Tests.csproj", "{C6CFD7E1-B855-44DC-B4CE-9CD72984AF52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +47,6 @@ Global
 		{C6CFD7E1-B855-44DC-B4CE-9CD72984AF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6CFD7E1-B855-44DC-B4CE-9CD72984AF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6CFD7E1-B855-44DC-B4CE-9CD72984AF52}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17B250AA-691E-4E14-AF82-EF8D5C45260E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17B250AA-691E-4E14-AF82-EF8D5C45260E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17B250AA-691E-4E14-AF82-EF8D5C45260E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17B250AA-691E-4E14-AF82-EF8D5C45260E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,7 +57,6 @@ Global
 		{AC71DF9C-99FA-4A63-990A-66C8010355A6} = {74E5ECE0-06B4-401C-AEBA-E8DD53E17943}
 		{29300103-CB76-4A1D-B6FD-FFD91C1EC8AA} = {74E5ECE0-06B4-401C-AEBA-E8DD53E17943}
 		{C6CFD7E1-B855-44DC-B4CE-9CD72984AF52} = {74E5ECE0-06B4-401C-AEBA-E8DD53E17943}
-		{17B250AA-691E-4E14-AF82-EF8D5C45260E} = {3BD6582C-E9D9-4F31-86AE-990304A1581D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC189D38-E6B9-440B-84A8-BDA57FE78C2E}

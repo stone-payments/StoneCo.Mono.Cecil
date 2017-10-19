@@ -2,6 +2,7 @@
   
   <PropertyGroup>
     <TargetFrameworks>$(TestProjectTargetFrameworks)</TargetFrameworks>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
   
   <ItemGroup Condition=" '$(TargetFramework)' != '$(TestProjectTargetFrameworkForNetStandard)' ">
